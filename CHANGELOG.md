@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/cloudmatt/sr-test/compare/v1.0.1...v1.0.2) (2025-06-22)
+
+
+### Bug Fixes
+
+* fix permissions on publish ([9e4d6d6](https://github.com/cloudmatt/sr-test/commit/9e4d6d64d3da33433e49ceb7063276857f8dfee8))
+
 ## [1.0.1](https://github.com/cloudmatt/sr-test/compare/v1.0.0...v1.0.1) (2025-06-22)
 
 
