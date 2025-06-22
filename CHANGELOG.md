@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/cloudmatt/sr-test/compare/v1.0.2...v1.1.0) (2025-06-22)
+
+
+### Features
+
+* add issues permissions ([f5ea0ac](https://github.com/cloudmatt/sr-test/commit/f5ea0acd1e2c539769717333853c28b77d5e110d))
+
 ## [1.0.2](https://github.com/cloudmatt/sr-test/compare/v1.0.1...v1.0.2) (2025-06-22)
 
 
