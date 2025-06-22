@@ -8,7 +8,7 @@ module.exports = {
       '@codedependant/semantic-release-docker',
       {
         dockerTags: ['latest', '{{version}}'],
-        dockerImage: '{{owner}}/{{repo}}',
+        dockerImage: `${process.env.OWNER}/${process.env.IMAGE_NAME}`,
         dockerRegistry: 'ghcr.io',
         dockerPlatform: ['linux/amd64', 'linux/arm64']
       }
