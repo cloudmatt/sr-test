@@ -5,16 +5,12 @@ module.exports = {
     '@semantic-release/release-notes-generator',
     '@semantic-release/changelog',
     [
-      '@semantic-release/exec',
+      '@codedependant/semantic-release-docker',
       {
-        prepareCmd: `
-          docker buildx build \
-            --platform linux/amd64,linux/arm64 \
-            --tag ghcr.io/\${env.OWNER}/\${env.IMAGE_NAME}:\${nextRelease.version} \
-            --tag ghcr.io/\${env.OWNER}/\${env.IMAGE_NAME}:latest \
-            --push .
-        `,
-        publishCmd: 'echo "Docker image pushed!"'
+        dockerTags: ['latest', '{{version}}'],
+        dockerImage: '{{owner}}/{{repo}}',
+        dockerRegistry: 'ghcr.io',
+        dockerPlatform: ['linux/amd64', 'linux/arm64']
       }
     ],
     '@semantic-release/git',
