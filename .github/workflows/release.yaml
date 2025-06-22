@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   release:
@@ -16,6 +13,7 @@ jobs:
     permissions:
       contents: write
       packages: write
+      pull-requests: write
 
     env:
       OWNER: ${{ github.repository_owner }}
