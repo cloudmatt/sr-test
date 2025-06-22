@@ -10,14 +10,13 @@ module.exports = {
         prepareCmd: `
           docker buildx build \
             --platform linux/amd64,linux/arm64 \
-            --tag ghcr.io/${process.env.OWNER}/${process.env.IMAGE_NAME}:${nextRelease.version} \
-            --tag ghcr.io/${process.env.OWNER}/${process.env.IMAGE_NAME}:latest \
+            --tag ghcr.io/\${env.OWNER}/\${env.IMAGE_NAME}:\${nextRelease.version} \
+            --tag ghcr.io/\${env.OWNER}/\${env.IMAGE_NAME}:latest \
             --push .
         `,
-        publishCmd: 'echo "Docker image published!"'
+        publishCmd: 'echo "Docker image pushed!"'
       }
     ],
     '@semantic-release/git',
     '@semantic-release/github'
   ]
-};
